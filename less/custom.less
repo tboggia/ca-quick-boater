@@ -1,0 +1,45 @@
+/* CUSTOM
+Created by: Tommaso Boggia */
+form { 
+	font-size:40px;
+    line-height: 80%;
+}
+.container {
+    padding: 5%;
+}
+input {    
+    &:extend(.form-input);
+    .cursive;
+}
+
+select { 
+    vertical-align: bottom;
+    -webkit-appearance: none; 
+    &:extend(.form-input);
+    .cursive;
+    height: 30px;
+    background: transparent;
+    letter-spacing: 2px;
+}
+option {
+    font-size: 10px;
+    font-family:'Ubuntu',sans-serif;
+	color: black;
+}
+optgroup {
+	color: @inputs;
+	margin:10px 0px 0px 10px;
+    font-size: 15px;
+    font-family: 'Grand Hotel',cursive;
+    font-weight: 100;
+    text-align: left;
+}
+#completion {
+    p {
+        margin-top:0px;
+        color: @inputs;
+    }
+}
+i {
+    cursor: pointer;
+}
