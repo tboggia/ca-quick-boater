@@ -16,7 +16,7 @@
 				}
 			],
 			"sources": [
-				"normalize.less",
+				"custom.less",
 				"variables.less"
 			]
 		}

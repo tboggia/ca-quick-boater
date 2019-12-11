@@ -1,6 +1,8 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-@import "variables.less";
-@import "normalize.less";
+@import "variables";
+// @import "normalize.less";
+@import "custom";
+
 html {
     color: @body;
     font-size: 1em;
@@ -58,7 +60,7 @@ textarea {
    ========================================================================== */
 
 body {
-    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font: 16px/26px 'Ubuntu', sans-serif;;
 }
 
 .wrapper {
@@ -93,7 +95,6 @@ body {
   min-height: 100vh; /* These two lines are counted as one :-)       */
   display: flex;
   align-items: center;
-  border:1px solid black;
 }
 .container {
     text-align:center;
