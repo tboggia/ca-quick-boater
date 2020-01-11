@@ -24,6 +24,28 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
   </head>
   <body>
+    <!-- Facebook SDK https://developers.facebook.com/docs/javascript/quickstart -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '2339047886407972',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v5.0'
+        });
+          
+        FB.AppEvents.logPageView();   
+          
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -163,6 +185,7 @@
         <canvas id="destination" width="800px" height="600px" class="hidden"></canvas>
       </div> <!-- container -->
     </div> <!-- jumbotron -->
+    <script src="https://gist.githubusercontent.com/htchaan/108b7aa6b71eb03e38019e64450ea095/raw/a8c68ce6114a78f9b19cc97adea9dc0fd803b393/Base64Binary.js"></script> <!--Base64Binary.js -->
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
     <script src="js/vendor/html2canvas.js"></script>
     <script src="js/plugins.js"></script>
