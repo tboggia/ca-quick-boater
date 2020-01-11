@@ -31,10 +31,10 @@
     <div class="jumbotron vertical-center">
       <div class="container">
         <form name="sentence">
-          <p>When you <input type="text" name="action" id="behavior" placeholder="what is happening?" class="text" size="30" maxlength="100" onchange=""></p>
-          <p>it makes me feel
+          <p>When you <input type="text" name="action" id="behavior" placeholder="what happened?" class="text" size="30" maxlength="100" onchange=""></p>
+          <p>it made me feel
             <select class="select" name="emotion" onchange="" placeholder="emotion" required>
-              <option selected="selected" value="" id="placeholder-emotion">Emotion</option>
+              <option selected="selected" value="" id="placeholder-emotion">emotion</option>
               <optgroup label="Joy & Contentment" id="joy">
                 <option value='adventurous'> adventurous </option>
                 <option value='affectionate'> affectionate </option>
@@ -74,7 +74,7 @@
                 <option value='relieved'> relieved </option>
                 <option value='satisfied'> satisfied </option>
                 <option value='stimulated'> stimulated </option>
-                <option value='surprsed'> surprsed </option>
+                <option value='surprsed'> surprised </option>
                 <option value='thankful'> thankful </option>
                 <option value='thrilled'> thrilled </option>
                 <option value='touched'> touched </option>
@@ -150,14 +150,17 @@
           </p>
         </form> 
         <div id="completion">
-            Communicate non-violently on
+            Non-violently communicate the message above on
             <p>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.bikeandjibe.net/nonviolent" title="Share on Facebook" class="share-btn">
+                <a href="" title="Share how you feel on Facebook" class="share-btn share-fb">
                     <span class="fa fa-2x fa-facebook-square" aria-hidden="true"></span>
                 </a>
-                <!-- <span class="fa fa-2x fa-twitter-square" aria-hidden="true"></span> -->
+                <a href="" title="Share how you feel on Twitter" class="share-btn share-tw">
+                    <span class="fa fa-2x fa-twitter-square" aria-hidden="true"></span>
+                </a>
             </p>
         </div>
+        <canvas id="destination" width="800px" height="600px" display:none></canvas>
       </div> <!-- container -->
     </div> <!-- jumbotron -->
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
