@@ -2,18 +2,30 @@ const behavior = document.forms.sentence.behavior;
 const emotion = document.forms.sentence.emotion;
 const shareCanvas = document.getElementById('destination');
 const sc = shareCanvas.getContext('2d');
-setFormOnQuery(getUrlParam());
+setFormFromQuery(getUrlParam());
 updateBodyId();
+document.forms.sentence.addEventListener("submit", (event) => {
+	event.preventDefault();
+	if (behavior.value && emotion.value) {
+		setUrlParams(behavior.value, emotion.value);
+		shareItAll();
+		// updateCanvas(); 
+	}
+	return false;
+});
 emotion.addEventListener('change', () => {
 	updateBodyId();
 	if (behavior.value) {
 		setUrlParams(behavior.value, emotion.value);
 		// updateCanvas(); 
 	}
-	behavior.addEventListener('change', () => {
+});
+
+behavior.addEventListener('change', () => {
+	if (emotion.value) {
 		setUrlParams(behavior.value, emotion.value);
 		// updateCanvas();
-	});
+	}
 });
 
 function updateBodyId() {
@@ -57,6 +69,7 @@ function getUrlParam() {
  * @param {String} emotion 
  */
 function setUrlParams(behavior, emotion) {
+	console.log("Params changing");
 	if (history.pushState) {
 		const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?emotion=${emotion}&behavior=${behavior}`;
 		window.history.pushState({path:newUrl},'',newUrl);
@@ -64,11 +77,30 @@ function setUrlParams(behavior, emotion) {
 }
 
 
-function setFormOnQuery(params) {
-	if (params.emotion) emotion.value = params.emotion;
-	if (params.behavior) behavior.value = params.behavior;
+function setFormFromQuery(params) {
+	if (params) {
+		emotion.value = decodeURI(params.emotion) || '';
+		behavior.value = decodeURI(params.behavior) || '';
+	}
 }
 
+function shareItAll(event) {
+	const width = 650;
+  const height = 450;
+  const nvdc = behavior.value && emotion.value ? `When you ${behavior.value}, it makes me feel ${emotion.value}.` : `I abhor violence`;
+  let url = '';
+  let platform = 'facebook';
+
+  if (event) {
+  	event.preventDefault();
+  	platform = !this.classList.contains('share-fb') ? 'facebook' : 'twitter';
+  }
+	if (platform === 'facebook') url = 'https://www.facebook.com/sharer/sharer.php?u=http://www.bikeandjibe.net/nonviolent/&quote=' + nvdc;
+		else url = 'https://twitter.com/intent/tweet?text=' + nvdc + ' - @nvdcgenerator';
+
+  document.querySelectorAll('.share-btn').forEach((a) => a.href = url);
+  window.open(url, 'Share Dialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width='+width+',height='+height+',top='+(screen.height/2-height/2)+',left='+(screen.width/2-width/2));
+}
 
 //  https://codepen.io/sunnysingh/pen/OPxbgq?editors=1010
 //  Creates share buttons
@@ -76,19 +108,7 @@ var shareButtons = document.querySelectorAll('.share-btn');
 
 if (shareButtons) {
   [].forEach.call(shareButtons, function(button) {
-  button.addEventListener('click', function(event) {
-		const width = 650;
-	  const height = 450;
-    const nvdc = behavior.value && emotion.value ? 'When you ' + behavior.value + ', it makes me feel ' + emotion.value + '.' : 'I abhor violence';
-    let sentence = '';
-
-	    event.preventDefault();
-			if (this.classList.contains('share-fb')) sentence = 'https://www.facebook.com/sharer/sharer.php?u=http://www.bikeandjibe.net/nonviolent/&quote=' + nvdc;
-				else sentence = 'https://twitter.com/intent/tweet?text=' + nvdc + ' - @nvdcgenerator';
-
-	    document.querySelectorAll('.share-btn').forEach((a) => a.href = sentence);
-	    window.open(this.href, 'Share Dialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width='+width+',height='+height+',top='+(screen.height/2-height/2)+',left='+(screen.width/2-width/2));
-  	});
+  button.addEventListener('click', shareItAll);
 	});
 }
 
