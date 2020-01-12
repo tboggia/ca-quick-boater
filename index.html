@@ -3,210 +3,210 @@
 <!--[if IE 7]>   <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>   <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="" prefix="og: https://ogp.me/ns#"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Nonviolent Communication Helper</title>
+  <meta property="og:title" content="Nonviolent Communication Helper" />
+  <meta property="og:url" content="https://nonviolent.bikeandjibe.net/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Have a hard time communicating how you feel, here is a helping hand for you" />
+  <meta name="description" content="Have a hard time communicating how you feel, here is a helping hand for you">
+  <meta property="og:image" content="https://nonviolent.bikeandjibe.net/social-share.jpg" />
+  <meta property="fb:app_id" content="2339047886407972" />
+
+  <link rel="canonical" href="https://nonviolent.bikeandjibe.net/">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300|Grand+Hotel' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+</head>
+<body>
+<!-- Facebook SDK https://developers.facebook.com/docs/javascript/quickstart -->
+<script>
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId    : '2339047886407972',
+    cookie   : true,
+    xfbml    : true,
+    version  : 'v5.0'
+  });
     
-    <title>Nonviolent Communication Helper</title>
-    <meta property="og:title" content="Nonviolent Communication Helper" />
-    <meta property="og:url" content="https://nonviolent.bikeandjibe.net/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="Have a hard time communicating how you feel, here is a helping hand for you" />
-    <meta name="description" content="Have a hard time communicating how you feel, here is a helping hand for you">
-    <meta property="og:image" content="https://nonviolent.bikeandjibe.net/social-share.jpg" />
-    <meta property="fb:app_id" content="2339047886407972" />
+  FB.AppEvents.logPageView();   
+    
+  };
 
-    <link rel="canonical" href="https://nonviolent.bikeandjibe.net/">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="css/main.css">
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300|Grand+Hotel' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-  </head>
-  <body>
-    <!-- Facebook SDK https://developers.facebook.com/docs/javascript/quickstart -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '2339047886407972',
-          cookie     : true,
-          xfbml      : true,
-          version    : 'v5.0'
-        });
-          
-        FB.AppEvents.logPageView();   
-          
-      };
-
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "https://connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  (function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "https://connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
 
 <fb:login-button 
   scope="public_profile,email"
   onlogin="checkLoginState();">
 </fb:login-button>
-    <div class="jumbotron vertical-center">
-      <div class="container">
-        <form name="sentence">
-          <p>When you <input type="text" name="action" id="behavior" placeholder="what happened?" class="text" size="30" maxlength="100" onchange=""></p>
-          <p>it made me feel
-            <select class="select" name="emotion" onchange="" placeholder="emotion" required>
-              <option selected="selected" value="" id="placeholder-emotion">emotion</option>
-              <optgroup label="Joy & Contentment" id="joy">
-                <option value='adventurous'> adventurous </option>
-                <option value='affectionate'> affectionate </option>
-                <option value='alive'> alive </option>
-                <option value='amazed'> amazed </option>
-                <option value='amused'> amused </option>
-                <option value='astonished'> astonished </option>
-                <option value='calm'> calm </option>
-                <option value='confident'> confident </option>
-                <option value='content'> content </option>
-                <option value='curious'> curious </option>
-                <option value='delighted'> delighted </option>
-                <option value='determined'> determined </option>
-                <option value='eager'> eager </option>
-                <option value='ecstatic'> ecstatic </option>
-                <option value='encouraged'> encouraged </option>
-                <option value='excited'> excited </option>
-                <option value='fascinated'> fascinated </option>
-                <option value='friendly'> friendly </option>
-                <option value='giddy'> giddy </option>
-                <option value='glad'> glad </option>
-                <option value='grateful'> grateful </option>
-                <option value='happy'> happy </option>
-                <option value='hopeful'> hopeful </option>
-                <option value='inspired'> inspired </option>
-                <option value='intrigued'> intrigued </option>
-                <option value='invigorated'> invigorated </option>
-                <option value='joyful'> joyful </option>
-                <option value='loving'> loving </option>
-                <option value='moved'> moved </option>
-                <option value='ovejoued'> ovejoued </option>
-                <option value='peaceful'> peaceful </option>
-                <option value='pleased'> pleased </option>
-                <option value='proud'> proud </option>
-                <option value='refreshed'> refreshed </option>
-                <option value='relaxed'> relaxed </option>
-                <option value='relieved'> relieved </option>
-                <option value='satisfied'> satisfied </option>
-                <option value='stimulated'> stimulated </option>
-                <option value='surprsed'> surprised </option>
-                <option value='thankful'> thankful </option>
-                <option value='thrilled'> thrilled </option>
-                <option value='touched'> touched </option>
-                <option value='tranquil'> tranquil </option>
-                <option value='trusting'> trusting </option>
-                <option value='upbeat'> upbeat </option>
-              </optgroup>
-              <optgroup label="Fear & Anxiety">
-                <option value='afraid'> afraid </option>
-                <option value='alarmed'> alarmed </option>
-                <option value='anxious'> anxious </option>
-                <option value='apprehensive'> apprehensive </option>
-                <option value='bewildered'> bewildered </option>
-                <option value='cautious'> cautious </option>
-                <option value='concerned'> concerned </option>
-                <option value='confused'> confused </option>
-                <option value='disconcerted'> disconcerted </option>
-                <option value='disturbed'> disturbed </option>
-                <option value='dubious'> dubious </option>
-                <option value='embarassed'> embarassed </option>
-                <option value='impatient'> impatient </option>
-                <option value='jittery'> jittery </option>
-                <option value='nervous'> nervous </option>
-                <option value='overwhelmed'> overwhelmed </option>
-                <option value='panicky'> panicky </option>
-                <option value='perplexed'> perplexed </option>
-                <option value='puzzled'> puzzled </option>
-                <option value='reluctant'> reluctant </option>
-                <option value='restless'> restless </option>
-                <option value='scared'> scared </option>
-                <option value='shocked'> shocked </option>
-                <option value='stressed'> stressed </option>
-                <option value='terrified'> terrified </option>
-                <option value='worried'> worried </option>
-              </optgroup>
-              <optgroup label="Anger & Frustration">
-                <option value='aggravated'> aggravated </option>
-                <option value='agitated'> agitated </option>
-                <option value='angry'> angry </option>
-                <option value='annoyed'> annoyed </option>
-                <option value='appalled'> appalled </option>
-                <option value='cranky'> cranky </option>
-                <option value='disgusted'> disgusted </option>
-                <option value='exasperated'> exasperated </option>
-                <option value='frustrated'> frustrated </option>
-                <option value='furious'> furious </option>
-                <option value='impatient'> impatient </option>
-                <option value='indignant'> indignant </option>
-                <option value='infuriated'> infuriated </option>
-                <option value='irritated'> irritated </option>
-                <option value='resentful'> resentful </option>
-                <option value='upset'> upset </option>
-              </optgroup>
-              <optgroup label="Sadness & Grief">
-                <option value='bored'> bored </option>
-                <option value='depressed'> depressed </option>
-                <option value='disappointed'> disappointed </option>
-                <option value='discouraged'> discouraged </option>
-                <option value='diseneartened'> diseneartened </option>
-                <option value='dismayed'> dismayed </option>
-                <option value='despairing'> despairing </option>
-                <option value='exhausted'> exhausted </option>
-                <option value='helpless'> helpless </option>
-                <option value='hopeless'> hopeless </option>
-                <option value='hurt'> hurt </option>
-                <option value='lonely'> lonely </option>
-                <option value='melancholic'> melancholic </option>
-                <option value='sad'> sad </option>
-                <option value='tired'> tired </option>
-                <option value='troubled'> troubled </option>
-              </optgroup>
-            </select>  
-          </p>
-        </form> 
-        <div id="completion">
-            Non-violently communicate the message above on
-            <p>
-                <a href="" title="Share how you feel on Facebook" class="share-btn share-fb">
-                    <span class="fa fa-2x fa-facebook-square" aria-hidden="true"></span>
-                </a>
-                <a href="" title="Share how you feel on Twitter" class="share-btn share-tw">
-                    <span class="fa fa-2x fa-twitter-square" aria-hidden="true"></span>
-                </a>
-            </p>
-        </div>
-        <canvas id="destination" width="800px" height="600px" class="hidden"></canvas>
-      </div> <!-- container -->
-    </div> <!-- jumbotron -->
-    <script src="https://gist.githubusercontent.com/htchaan/108b7aa6b71eb03e38019e64450ea095/raw/a8c68ce6114a78f9b19cc97adea9dc0fd803b393/Base64Binary.js"></script> <!--Base64Binary.js -->
-    <script src="js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="js/vendor/html2canvas.js"></script>
-    <script src="js/plugins.js"></script>
-    <script defer src="js/main.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<div class=" vertical-center">
+  <div class="container">
+  <form name="sentence">
+    <p>When you <input type="text" name="action" id="behavior" placeholder="what happened?" class="text" size="30" maxlength="100" onchange=""></p>
+    <p>it made me feel
+    <select class="select" name="emotion" onchange="" placeholder="emotion" required>
+      <option selected="selected" value="" id="placeholder-emotion">emotion</option>
+      <optgroup label="Joy & Contentment" id="joy">
+      <option value='adventurous'> adventurous </option>
+      <option value='affectionate'> affectionate </option>
+      <option value='alive'> alive </option>
+      <option value='amazed'> amazed </option>
+      <option value='amused'> amused </option>
+      <option value='astonished'> astonished </option>
+      <option value='calm'> calm </option>
+      <option value='confident'> confident </option>
+      <option value='content'> content </option>
+      <option value='curious'> curious </option>
+      <option value='delighted'> delighted </option>
+      <option value='determined'> determined </option>
+      <option value='eager'> eager </option>
+      <option value='ecstatic'> ecstatic </option>
+      <option value='encouraged'> encouraged </option>
+      <option value='excited'> excited </option>
+      <option value='fascinated'> fascinated </option>
+      <option value='friendly'> friendly </option>
+      <option value='giddy'> giddy </option>
+      <option value='glad'> glad </option>
+      <option value='grateful'> grateful </option>
+      <option value='happy'> happy </option>
+      <option value='hopeful'> hopeful </option>
+      <option value='inspired'> inspired </option>
+      <option value='intrigued'> intrigued </option>
+      <option value='invigorated'> invigorated </option>
+      <option value='joyful'> joyful </option>
+      <option value='loving'> loving </option>
+      <option value='moved'> moved </option>
+      <option value='ovejoued'> ovejoued </option>
+      <option value='peaceful'> peaceful </option>
+      <option value='pleased'> pleased </option>
+      <option value='proud'> proud </option>
+      <option value='refreshed'> refreshed </option>
+      <option value='relaxed'> relaxed </option>
+      <option value='relieved'> relieved </option>
+      <option value='satisfied'> satisfied </option>
+      <option value='stimulated'> stimulated </option>
+      <option value='surprsed'> surprised </option>
+      <option value='thankful'> thankful </option>
+      <option value='thrilled'> thrilled </option>
+      <option value='touched'> touched </option>
+      <option value='tranquil'> tranquil </option>
+      <option value='trusting'> trusting </option>
+      <option value='upbeat'> upbeat </option>
+      </optgroup>
+      <optgroup label="Fear & Anxiety">
+      <option value='afraid'> afraid </option>
+      <option value='alarmed'> alarmed </option>
+      <option value='anxious'> anxious </option>
+      <option value='apprehensive'> apprehensive </option>
+      <option value='bewildered'> bewildered </option>
+      <option value='cautious'> cautious </option>
+      <option value='concerned'> concerned </option>
+      <option value='confused'> confused </option>
+      <option value='disconcerted'> disconcerted </option>
+      <option value='disturbed'> disturbed </option>
+      <option value='dubious'> dubious </option>
+      <option value='embarassed'> embarassed </option>
+      <option value='impatient'> impatient </option>
+      <option value='jittery'> jittery </option>
+      <option value='nervous'> nervous </option>
+      <option value='overwhelmed'> overwhelmed </option>
+      <option value='panicky'> panicky </option>
+      <option value='perplexed'> perplexed </option>
+      <option value='puzzled'> puzzled </option>
+      <option value='reluctant'> reluctant </option>
+      <option value='restless'> restless </option>
+      <option value='scared'> scared </option>
+      <option value='shocked'> shocked </option>
+      <option value='stressed'> stressed </option>
+      <option value='terrified'> terrified </option>
+      <option value='worried'> worried </option>
+      </optgroup>
+      <optgroup label="Anger & Frustration">
+      <option value='aggravated'> aggravated </option>
+      <option value='agitated'> agitated </option>
+      <option value='angry'> angry </option>
+      <option value='annoyed'> annoyed </option>
+      <option value='appalled'> appalled </option>
+      <option value='cranky'> cranky </option>
+      <option value='disgusted'> disgusted </option>
+      <option value='exasperated'> exasperated </option>
+      <option value='frustrated'> frustrated </option>
+      <option value='furious'> furious </option>
+      <option value='impatient'> impatient </option>
+      <option value='indignant'> indignant </option>
+      <option value='infuriated'> infuriated </option>
+      <option value='irritated'> irritated </option>
+      <option value='resentful'> resentful </option>
+      <option value='upset'> upset </option>
+      </optgroup>
+      <optgroup label="Sadness & Grief">
+      <option value='bored'> bored </option>
+      <option value='depressed'> depressed </option>
+      <option value='disappointed'> disappointed </option>
+      <option value='discouraged'> discouraged </option>
+      <option value='diseneartened'> diseneartened </option>
+      <option value='dismayed'> dismayed </option>
+      <option value='despairing'> despairing </option>
+      <option value='exhausted'> exhausted </option>
+      <option value='helpless'> helpless </option>
+      <option value='hopeless'> hopeless </option>
+      <option value='hurt'> hurt </option>
+      <option value='lonely'> lonely </option>
+      <option value='melancholic'> melancholic </option>
+      <option value='sad'> sad </option>
+      <option value='tired'> tired </option>
+      <option value='troubled'> troubled </option>
+      </optgroup>
+    </select>  
+    </p>
+  </form> 
+  <div id="completion">
+    Non-violently communicate the message above on
+    <p>
+      <a href="" title="Share how you feel on Facebook" class="share-btn share-fb">
+        <span class="fa fa-2x fa-facebook-square" aria-hidden="true"></span>
+      </a>
+      <a href="" title="Share how you feel on Twitter" class="share-btn share-tw">
+        <span class="fa fa-2x fa-twitter-square" aria-hidden="true"></span>
+      </a>
+    </p>
+  </div>
+  <canvas id="destination" width="800px" height="600px" class="hidden"></canvas>
+  </div> <!-- container -->
+</div> <!-- jumbotron -->
+<script src="https://gist.githubusercontent.com/htchaan/108b7aa6b71eb03e38019e64450ea095/raw/a8c68ce6114a78f9b19cc97adea9dc0fd803b393/Base64Binary.js"></script> <!--Base64Binary.js -->
+<script src="js/vendor/jquery-1.11.2.min.js"></script>
+<script src="js/vendor/html2canvas.js"></script>
+<script src="js/plugins.js"></script>
+<script defer src="js/main.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-    </script>
-  </body>
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='https://www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script>
+</body>
 </html>
