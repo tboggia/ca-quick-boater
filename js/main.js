@@ -2,8 +2,9 @@ const behavior = document.forms.sentence.behavior;
 const emotion = document.forms.sentence.emotion;
 const shareCanvas = document.getElementById('destination');
 const sc = shareCanvas.getContext('2d');
-setFormFromQuery(getUrlParam());
-updateBodyId();
+if ( setFormFromQuery(getUrlParam())) {
+	updateBodyId();
+}
 document.forms.sentence.addEventListener("submit", (event) => {
 	event.preventDefault();
 	if (behavior.value && emotion.value) {
@@ -69,7 +70,6 @@ function getUrlParam() {
  * @param {String} emotion 
  */
 function setUrlParams(behavior, emotion) {
-	console.log("Params changing");
 	if (history.pushState) {
 		const newUrl = `${window.location.protocol}//${window.location.host}${window.location.pathname}?emotion=${emotion}&behavior=${behavior}`;
 		window.history.pushState({path:newUrl},'',newUrl);
@@ -79,9 +79,11 @@ function setUrlParams(behavior, emotion) {
 
 function setFormFromQuery(params) {
 	if (params) {
-		emotion.value = decodeURI(params.emotion) || '';
-		behavior.value = decodeURI(params.behavior) || '';
+		if (params.emotion) emotion.value = decodeURI(params.emotion) || '';
+		if (params.behavior) behavior.value = decodeURI(params.behavior) || '';
+		return emotion.value && behavior.value;
 	}
+	return false;
 }
 
 function shareItAll(event) {
@@ -93,7 +95,7 @@ function shareItAll(event) {
 
   if (event) {
   	event.preventDefault();
-  	platform = !this.classList.contains('share-fb') ? 'facebook' : 'twitter';
+  	platform = this.classList.contains('share-fb') ? 'facebook' : 'twitter';
   }
 	if (platform === 'facebook') url = 'https://www.facebook.com/sharer/sharer.php?u=http://www.bikeandjibe.net/nonviolent/&quote=' + nvdc;
 		else url = 'https://twitter.com/intent/tweet?text=' + nvdc + ' - @nvdcgenerator';
