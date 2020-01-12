@@ -84,6 +84,7 @@ function wrapText(text, x, y, maxWidth, fontSize, fontFace){
 FB.getLoginStatus(function(response) {
     console.log(response);
 });
+    console.log("Hello world");
 
 
 
