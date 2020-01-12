@@ -79,14 +79,26 @@ function wrapText(text, x, y, maxWidth, fontSize, fontFace){
 	});
 }
 
+function getUrlParam() {
+	const hashes = window.location.search.substr(1, window.location.search.length).split('&');
+	if (hashes[0] !== '') {
+		const params = hashes.reduce((params, hash) => {
+		  const [key, val] = hash.split('=');
+		  params[key] = decodeURIComponent(val);
+		  return params;
+		}, {});
+	}
+	return params;
+}
+
 
 // FB login checker
-function checkLoginState() {
-  FB.getLoginStatus(function(response) {
-    console.log(response);
-    // statusChangeCallback(response);
-  });
-}
+// function checkLoginState() {
+//   FB.getLoginStatus(function(response) {
+//     console.log(response);
+//     // statusChangeCallback(response);
+//   });
+// }
 
 //  https://codepen.io/sunnysingh/pen/OPxbgq?editors=1010
 //  Creates share buttons
