@@ -50,6 +50,10 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+<fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
     <div class="jumbotron vertical-center">
       <div class="container">
         <form name="sentence">
@@ -189,7 +193,7 @@
     <script src="js/vendor/jquery-1.11.2.min.js"></script>
     <script src="js/vendor/html2canvas.js"></script>
     <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>

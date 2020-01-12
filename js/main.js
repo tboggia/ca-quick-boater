@@ -81,12 +81,12 @@ function wrapText(text, x, y, maxWidth, fontSize, fontFace){
 
 
 // FB login checker
-FB.getLoginStatus(function(response) {
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
     console.log(response);
-});
-    console.log("Hello world");
-
-
+    // statusChangeCallback(response);
+  });
+}
 
 //  https://codepen.io/sunnysingh/pen/OPxbgq?editors=1010
 //  Creates share buttons
@@ -101,8 +101,6 @@ if (shareButtons) {
           sentence = '';
 
       event.preventDefault();
-      console.log(this);
-      console.log(this.classList);
 			if (this.classList.contains('share-fb')) sentence = 'https://www.facebook.com/sharer/sharer.php?u=http://www.bikeandjibe.net/nonviolent/&quote=' + nvdc;
 				else sentence = 'https://twitter.com/intent/tweet?text=' + nvdc + ' - @nvdcgenerator';
 
