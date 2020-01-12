@@ -79,28 +79,34 @@ function wrapText(text, x, y, maxWidth, fontSize, fontFace){
 	});
 }
 
+
+// FB login checker
+FB.getLoginStatus(function(response) {
+    console.log(response);
+});
+
+
+
 //  https://codepen.io/sunnysingh/pen/OPxbgq?editors=1010
-(function(){
-  var shareButtons = document.querySelectorAll('.share-btn');
+//  Creates share buttons
+var shareButtons = document.querySelectorAll('.share-btn');
 
-  if (shareButtons) {
-      [].forEach.call(shareButtons, function(button) {
-      button.addEventListener('click', function(event) {
- 				var width = 650,
-            height = 450,
-            nvdc = behavior.value && emotion.value ? 'When you ' + behavior.value + ', it makes me feel ' + emotion.value + '.' : 'I abhor violence',
-            sentence = '';
+if (shareButtons) {
+    [].forEach.call(shareButtons, function(button) {
+    button.addEventListener('click', function(event) {
+				var width = 650,
+          height = 450,
+          nvdc = behavior.value && emotion.value ? 'When you ' + behavior.value + ', it makes me feel ' + emotion.value + '.' : 'I abhor violence',
+          sentence = '';
 
-        event.preventDefault();
-        console.log(this);
-        console.log(this.classList);
-				if (this.classList.contains('share-fb')) sentence = 'https://www.facebook.com/sharer/sharer.php?u=http://www.bikeandjibe.net/nonviolent/&quote=' + nvdc;
-					else sentence = 'https://twitter.com/intent/tweet?text=' + nvdc + ' - @nvdcgenerator';
+      event.preventDefault();
+      console.log(this);
+      console.log(this.classList);
+			if (this.classList.contains('share-fb')) sentence = 'https://www.facebook.com/sharer/sharer.php?u=http://www.bikeandjibe.net/nonviolent/&quote=' + nvdc;
+				else sentence = 'https://twitter.com/intent/tweet?text=' + nvdc + ' - @nvdcgenerator';
 
-        document.querySelectorAll('.share-btn').forEach((a) => a.href = sentence);
-        window.open(this.href, 'Share Dialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width='+width+',height='+height+',top='+(screen.height/2-height/2)+',left='+(screen.width/2-width/2));
-      });
+      document.querySelectorAll('.share-btn').forEach((a) => a.href = sentence);
+      window.open(this.href, 'Share Dialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width='+width+',height='+height+',top='+(screen.height/2-height/2)+',left='+(screen.width/2-width/2));
     });
-  }
-
-})();
+  });
+}
