@@ -27,7 +27,7 @@
 <div class=" vertical-center">
   <div class="container">
     <p>Step 1: drag this button to your bookmarks bar:</p>
-    <p><a class="bookmarklet" href="javascript:(function()%7Bconst%20intervalID%20%3D%20setInterval(clickNext%2C%201000)%3Bconst%20nextButton%20%3D%20document.getElementById('forwardButton')%3Bfunction%20is_next_clickable()%20%7Breturn%20!nextButton.classList.contains('disabled')%3B%7Dfunction%20clickNext(outputContent)%20%7Bconsole.log(is_next_clickable())%3Bif%20(is_next_clickable())%20%7BnextButton.click()%3B%7D%7Dfunction%20clearMessage()%20%7BclearTimeout(intervalID)%3B%7DintervalID%7D)()">QuickCard</a></p>
+    <p><a class="bookmarklet" href="javascript:(function()%7Bconst%20iframe%20%3D%20document.getElementById('course-frame')%3Bconst%20iframedoc%20%3D%20iframe.contentDocument%3F%20iframe.contentDocument%3A%20iframe.contentWindow.document%3Bconst%20inceptionframe%20%3D%20iframedoc.getElementById('scormdriver_content')%3Bconst%20inceptiondoc%20%3D%20inceptionframe.contentDocument%3F%20inceptionframe.contentDocument%3A%20inceptionframe.contentWindow.document%3Bconst%20intervalID%20%3D%20setInterval(clickNext%2C%201000)%3Bconst%20nextButton%20%3D%20inceptiondoc.getElementById('forwardButton')%3Bfunction%20is_next_clickable()%20%7Bconsole.log(nextButton)%3Breturn%20!nextButton.classList.contains('disabled')%3B%7Dfunction%20clickNext()%20%7Bif%20(is_next_clickable())%20%7BnextButton.click()%3B%7D%7DintervalID%7D)()">QuickCard</a></p>
     <p>Step 2: start your <a href="https://courses.boatus.org/course/id/BTUS100S" target="_blank">Boat US boater card course</a>.</p>
     <p>Step 3: click the bookmark while on the course.</p>
   </div> <!-- container -->
