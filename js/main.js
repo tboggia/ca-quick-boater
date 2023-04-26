@@ -7,7 +7,6 @@ const intervalID = setInterval(clickNext, 1000);
 const nextButton = inceptiondoc.getElementById('forwardButton');
 
 function is_next_clickable() {
-    console.log(nextButton);
     return !nextButton.classList.contains('disabled');
 }
 
