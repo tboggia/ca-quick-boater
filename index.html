@@ -26,10 +26,12 @@
 <body>
 <div class=" vertical-center">
   <div class="container">
-    <p>Step 1: drag this button to your bookmarks bar:</p>
-    <p><a class="bookmarklet" href="javascript:(function()%7Bconst%20iframe%20%3D%20document.getElementById('course-frame')%3Bconst%20iframedoc%20%3D%20iframe.contentDocument%3F%20iframe.contentDocument%3A%20iframe.contentWindow.document%3Bconst%20inceptionframe%20%3D%20iframedoc.getElementById('scormdriver_content')%3Bconst%20inceptiondoc%20%3D%20inceptionframe.contentDocument%3F%20inceptionframe.contentDocument%3A%20inceptionframe.contentWindow.document%3Bconst%20intervalID%20%3D%20setInterval(clickNext%2C%201000)%3Bconst%20nextButton%20%3D%20inceptiondoc.getElementById('forwardButton')%3Bfunction%20is_next_clickable()%20%7Breturn%20!nextButton.classList.contains('disabled')%3B%7Dfunction%20clickNext()%20%7Bif%20(is_next_clickable())%20%7BnextButton.click()%3B%7D%7DintervalID%7D)()">QuickCard</a></p>
+    <p>Step 1: drag these buttons to your bookmarks bar:</p>
+    <p><a class="bookmarklet" href="javascript:(function()%7Bconst%20iframe%20%3D%20document.getElementById('course-frame')%3Bconst%20iframedoc%20%3D%20iframe.contentDocument%3F%20iframe.contentDocument%3A%20iframe.contentWindow.document%3Bconst%20inceptionframe%20%3D%20iframedoc.getElementById('scormdriver_content')%3Bconst%20inceptiondoc%20%3D%20inceptionframe.contentDocument%3F%20inceptionframe.contentDocument%3A%20inceptionframe.contentWindow.document%3Bconst%20intervalID%20%3D%20setInterval(clickNext%2C%201000)%3Bconst%20nextButton%20%3D%20inceptiondoc.getElementById('forwardButton')%3Bfunction%20is_next_clickable()%20%7Breturn%20!nextButton.classList.contains('disabled')%3B%7Dfunction%20clickNext()%20%7Bif%20(is_next_clickable())%20%7BnextButton.click()%3B%7D%7DintervalID%7D)()">▶️ QuickCard</a></p>
+    <p><a class="bookmarklet" href="javascript:(clearTimeout(intervalID);)">⏸ QuickCard </a></p>
     <p>Step 2: start your <a href="https://courses.boatus.org/course/id/BTUS100S" target="_blank">Boat US boater card course</a>.</p>
-    <p>Step 3: click the bookmark while on the course.</p>
+    <p>Step 3: click the ▶️ bookmark while on the course to start auto-advancing.</p>
+    <p>Step 4: click the ⏸ bookmark to stop auto-advancing during quizzes or if you want to spend more time on a card.</p>
   </div> <!-- container -->
 </div> 
 <script src="js/plugins.js"></script>
