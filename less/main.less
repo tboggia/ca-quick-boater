@@ -1,7 +1,8 @@
+// out: "../css/main.css", compress: true, sourceMap: true
+
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-@import "variables";
-// @import "normalize.less";
-@import "custom";
+
+@import "custom.less";
 
 html {
     color: @body;
@@ -120,6 +121,7 @@ body {
    ==================== */
 
     nav a {
+        
         float: left;
         width: 27%;
         margin: 0 1.7%;
@@ -311,4 +313,33 @@ body {
     h3 {
         page-break-after: avoid;
     }
+}
+
+@body: black;
+@variables: blue;
+@inputs: darkred;
+
+body {
+    font-size: 40px;
+    line-height: 100%;
+}
+
+.container {
+    padding: 5%;
+}
+
+a {
+    font-family: 'Grand Hotel', cursive;
+}
+
+a.bookmarklet {
+    background: transparent;
+    font-family: 'Grand Hotel', cursive;
+    border: 3px solid darkred;
+    border-radius: 1rem;
+    color: darkred;
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-decoration: none;
 }
